@@ -25,6 +25,7 @@
       <script>scripts\passarFase.gml</script>
       <script>scripts\perderFase.gml</script>
     </scripts>
+    <script>scripts\aplicarGravidade.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_Cobra</object>
@@ -33,11 +34,16 @@
     <object>objects\obj_Comida</object>
     <object>objects\obj_Controle</object>
     <object>objects\obj_Objetivo</object>
+    <object>objects\VAZIO</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Fase1</room>
-    <room>rooms\Fase</room>
-    <room>rooms\FaseX</room>
+    <room>rooms\FaseInicio</room>
+    <room>rooms\FasePulos</room>
+    <room>rooms\FasePendurada</room>
+    <room>rooms\FaseManobras</room>
+    <room>rooms\FaseMergulho</room>
+    <room>rooms\FaseContorno</room>
+    <room>rooms\room6</room>
   </rooms>
   <constants number="9">
     <constant name="EST_ESPERANDO">0</constant>

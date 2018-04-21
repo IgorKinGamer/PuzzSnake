@@ -10,3 +10,15 @@ Movimento: Horizontal é sempre "quadradinho", mas o vertical não
 Pegar comida: Só com a cabeça, outros membros destroem a comida?
 
 Velocidade: Aumenta no decorrer das fases?
+
+# Fases #
+
+## Títulos ##
+
+Início: 
+Pulos: To climb or not to climb | Not so straightforward
+Pendurada: Fall... or fall...
+Manobras: On the edge | Can't get back!
+Mergulho: Dive | De cabeça / Não de barriga
+Contorno: 
+:
