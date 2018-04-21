@@ -35,5 +35,6 @@ if (nCrescer > 0)
     nCrescer--;
 }
 
+// Move todos os membros
 moverMembros(xNovo, yNovo);
 

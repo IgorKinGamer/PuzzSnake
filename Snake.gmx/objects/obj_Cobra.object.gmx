@@ -60,7 +60,7 @@ corpo[|0] = id;
             <kind>1</kind>
             <string>/// Estado
 
-estado = EST_MOVENDO;
+estado = EST_ESPERANDO;
 
 </string>
           </argument>
@@ -84,7 +84,7 @@ estado = EST_MOVENDO;
             <kind>1</kind>
             <string>/// Movimento
 
-contPasso = 30; // TODO
+contPasso = 1;
 direcao = DIR_DIREITA;
 direcaoAnt = direcao;
 
@@ -119,6 +119,37 @@ ds_list_destroy(corpo);
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Iniciar a fase
+
+if (estado == EST_ESPERANDO)
+{
+    if (keyboard_check_pressed(vk_left)
+            || keyboard_check_pressed(vk_right)
+            || keyboard_check_pressed(vk_up)
+            || keyboard_check_pressed(vk_down))
+        estado = EST_MOVENDO;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>

@@ -31,7 +31,8 @@
   <rooms name="rooms">
     <room>rooms\Fase1</room>
   </rooms>
-  <constants number="7">
+  <constants number="8">
+    <constant name="EST_ESPERANDO">0</constant>
     <constant name="EST_MOVENDO">1</constant>
     <constant name="EST_MORTA">2</constant>
     <constant name="DIR_ESQUERDA">0</constant>
