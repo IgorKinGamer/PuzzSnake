@@ -8,5 +8,7 @@ Mostrar a sequência dos membros
 
 Mostrar crescimento pendente
 
+Encostar com o corpo no objetivo
+
 IU:
 - Mostrar tamanho atual

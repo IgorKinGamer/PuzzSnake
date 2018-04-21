@@ -273,26 +273,41 @@ for (i = 0; i &lt; numMembros(); i++)
     }
 }
 
-// Colisão com comida
+// Colisão com comida e objetivo
 for (i = 0; i &lt; numMembros(); i++)
 {
     var membro = corpo[|i];
     var xBase, yBase;
     xBase = membro.x + BLOCO/2 - deslH;
     yBase = membro.y + BLOCO   - deslV;
+    yCima = membro.y - deslV;
+    
+    // Comida
+    var comida;
     do
     {
-        var comida = collision_line(
+        comida = collision_line(
             xBase, yBase, xBase, yBase + movY,
             obj_Comida, false, true
         );
         if (comida != noone)
             if (membro == id) // Cabeça
-                comer(comida)
+                comer(comida);
             else
-                destruirComida(comida)
+                destruirComida(comida);
     }
     until (comida == noone);
+    
+    // Objetivo
+    var objetivo = collision_line(
+        xBase, yCima, xBase, yBase + movY - 1,
+        obj_Objetivo, false, true
+    );
+    if (objetivo != noone)
+        if (membro == id) // Cabeça
+            passarFase();
+        else
+            perderFase();
 }
 
 // Move cada membro

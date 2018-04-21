@@ -8,3 +8,5 @@ Outros tipos de comida?: Cresce mais blocos
 Movimento: Horizontal é sempre "quadradinho", mas o vertical não
 
 Pegar comida: Só com a cabeça, outros membros destroem a comida?
+
+Velocidade: Aumenta no decorrer das fases?

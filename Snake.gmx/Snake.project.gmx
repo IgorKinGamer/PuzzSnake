@@ -10,6 +10,7 @@
     <sprite>sprites\spr_Cabeca</sprite>
     <sprite>sprites\spr_Chao</sprite>
     <sprite>sprites\spr_Comida</sprite>
+    <sprite>sprites\spr_Objetivo</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -21,6 +22,8 @@
       <script>scripts\morrer.gml</script>
       <script>scripts\moverMembros.gml</script>
       <script>scripts\numMembros.gml</script>
+      <script>scripts\passarFase.gml</script>
+      <script>scripts\perderFase.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -29,14 +32,18 @@
     <object>objects\obj_Chao</object>
     <object>objects\obj_Comida</object>
     <object>objects\obj_Controle</object>
+    <object>objects\obj_Objetivo</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Fase1</room>
+    <room>rooms\Fase</room>
+    <room>rooms\FaseX</room>
   </rooms>
-  <constants number="8">
+  <constants number="9">
     <constant name="EST_ESPERANDO">0</constant>
     <constant name="EST_MOVENDO">1</constant>
     <constant name="EST_MORTA">2</constant>
+    <constant name="EST_GANHOU">3</constant>
     <constant name="DIR_ESQUERDA">0</constant>
     <constant name="DIR_DIREITA">1</constant>
     <constant name="DIR_CIMA">2</constant>
