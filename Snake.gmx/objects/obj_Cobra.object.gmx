@@ -36,6 +36,7 @@ corpo[|0] = id;
 corpo[|1] = instance_create(x - BLOCO, y, obj_Membro);
 corpo[|2] = instance_create(x - 2*BLOCO, y, obj_Membro);
 //corpo[|3] = instance_create(x - BLOCO, y, obj_Membro);
+
 </string>
           </argument>
         </arguments>
@@ -163,8 +164,12 @@ if (estado == EST_MOVENDO)
         yNovo = y + dy*BLOCO;
         // Verifica se vai morrer
         //if ()
+        
         // Verifica se tem comida
-        //if ()
+        comida = instance_place(xNovo, yNovo, obj_Comida); // Ineficiente...
+        if (comida != noone)
+            comer(comida);
+        
         // Move cada membro
         var i;
         for (i = ds_list_size(corpo) - 1; i &gt; 0; i--)

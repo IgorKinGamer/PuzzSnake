@@ -8,15 +8,22 @@
   <sprites name="sprites">
     <sprite>sprites\spr_Membro</sprite>
     <sprite>sprites\spr_Cabeca</sprite>
+    <sprite>sprites\spr_Chao</sprite>
+    <sprite>sprites\spr_Comida</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\comer.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_Cobra</object>
     <object>objects\obj_Membro</object>
+    <object>objects\obj_Chao</object>
+    <object>objects\obj_Comida</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\room_Fase1</room>
   </rooms>
   <constants number="6">
     <constant name="EST_MOVENDO">1</constant>

@@ -1,0 +1,3 @@
+Elementos
+
+Comida venenosa?: Diminui um bloco

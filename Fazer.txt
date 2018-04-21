@@ -1,6 +1,6 @@
 Fazer:
 
-Criar corpo inicialmente
+Criar corpo inicialmente (para cada fase individualmente?)
 
 Inicializar/Resetar contPasso corretamente (obj_Cobra_Step:Movimento)
 
