@@ -2,11 +2,12 @@
 
 var comida = argument0;
 
+// Destrói a comida
 with (comida)
     instance_destroy();
 
-// Cresce em um bloco
-ds_list_add(corpo, instance_create(0, 0, obj_Membro));
+// Manda crescer em um bloco
+nCrescer++;
 
 // Som TODO
 

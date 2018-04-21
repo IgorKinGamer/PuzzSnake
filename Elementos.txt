@@ -1,3 +1,4 @@
 Elementos
 
 Comida venenosa?: Diminui um bloco
+Outros tipos de comida?: Cresce mais blocos

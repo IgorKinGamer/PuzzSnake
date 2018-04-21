@@ -28,13 +28,14 @@
             <string>/// Corpo
 
 corpo = ds_list_create();
+nCrescer = 2; // Quanto blocos deve crescer
 
 // Cabeça
 corpo[|0] = id;
 
 // TODO
-corpo[|1] = instance_create(x - BLOCO, y, obj_Membro);
-corpo[|2] = instance_create(x - 2*BLOCO, y, obj_Membro);
+//corpo[|1] = instance_create(x - BLOCO, y, obj_Membro);
+//corpo[|2] = instance_create(x - 2*BLOCO, y, obj_Membro);
 //corpo[|3] = instance_create(x - BLOCO, y, obj_Membro);
 
 </string>
@@ -162,13 +163,21 @@ if (estado == EST_MOVENDO)
         }
         xNovo = x + dx*BLOCO;
         yNovo = y + dy*BLOCO;
+        
         // Verifica se vai morrer
-        //if ()
+        //if (instance_place(xNovo, yNovo, obj_Chao))
         
         // Verifica se tem comida
         comida = instance_place(xNovo, yNovo, obj_Comida); // Ineficiente...
         if (comida != noone)
             comer(comida);
+        
+        // Verifica se deve crescer
+        if (nCrescer &gt; 0)
+        {
+            ds_list_add(corpo, instance_create(0, 0, obj_Membro));
+            nCrescer--;
+        }
         
         // Move cada membro
         var i;
