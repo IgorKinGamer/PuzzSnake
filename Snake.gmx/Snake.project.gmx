@@ -14,19 +14,26 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\comer.gml</script>
+    <scripts name="cobra">
+      <script>scripts\executarPasso.gml</script>
+      <script>scripts\comer.gml</script>
+      <script>scripts\morrer.gml</script>
+      <script>scripts\moverMembros.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_Cobra</object>
     <object>objects\obj_Membro</object>
     <object>objects\obj_Chao</object>
     <object>objects\obj_Comida</object>
+    <object>objects\obj_Controle</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_Fase1</room>
+    <room>rooms\Fase1</room>
   </rooms>
-  <constants number="6">
+  <constants number="7">
     <constant name="EST_MOVENDO">1</constant>
+    <constant name="EST_MORTA">2</constant>
     <constant name="DIR_ESQUERDA">0</constant>
     <constant name="DIR_DIREITA">1</constant>
     <constant name="DIR_CIMA">2</constant>

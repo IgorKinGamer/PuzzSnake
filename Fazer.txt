@@ -5,3 +5,5 @@ Criar corpo inicialmente (para cada fase individualmente?)
 Inicializar/Resetar contPasso corretamente (obj_Cobra_Step:Movimento)
 
 Definir estados
+
+Mostrar a sequência dos membros

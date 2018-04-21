@@ -153,45 +153,7 @@ if (estado == EST_MOVENDO)
     contPasso--;
     if (contPasso == 0) // Hora de mover
     {
-        var dx, dy, xNovo, yNovo;
-        switch (direcao)
-        {
-            case DIR_ESQUERDA: dx = -1; dy =  0; break;
-            case DIR_DIREITA:  dx =  1; dy =  0; break;
-            case DIR_CIMA:     dx =  0; dy = -1; break;
-            case DIR_BAIXO:    dx =  0; dy =  1; break;
-        }
-        xNovo = x + dx*BLOCO;
-        yNovo = y + dy*BLOCO;
-        
-        // Verifica se vai morrer
-        //if (instance_place(xNovo, yNovo, obj_Chao))
-        
-        // Verifica se tem comida
-        comida = instance_place(xNovo, yNovo, obj_Comida); // Ineficiente...
-        if (comida != noone)
-            comer(comida);
-        
-        // Verifica se deve crescer
-        if (nCrescer &gt; 0)
-        {
-            ds_list_add(corpo, instance_create(0, 0, obj_Membro));
-            nCrescer--;
-        }
-        
-        // Move cada membro
-        var i;
-        for (i = ds_list_size(corpo) - 1; i &gt; 0; i--)
-        {
-            membro = corpo[|i];
-            anterior = corpo[|i - 1];
-            membro.x = anterior.x;
-            membro.y = anterior.y;
-        }
-        // Move a cabeça
-        x = xNovo;
-        y = yNovo;
-        direcaoAnt = direcao;
+        executarPasso();
         
         // Reseta contPasso TODO
         contPasso = 15;
