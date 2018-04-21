@@ -1,4 +1,10 @@
-Elementos
+# Elementos #
 
 Comida venenosa?: Diminui um bloco
 Outros tipos de comida?: Cresce mais blocos
+
+# Comportamentos #
+
+Movimento: Horizontal é sempre "quadradinho", mas o vertical não
+
+Pegar comida: Só com a cabeça, outros membros destroem a comida?
