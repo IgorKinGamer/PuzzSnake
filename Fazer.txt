@@ -1,0 +1,7 @@
+Fazer:
+
+Criar corpo inicialmente
+
+Inicializar/Resetar contPasso corretamente (obj_Cobra_Step:Movimento)
+
+Definir estados
