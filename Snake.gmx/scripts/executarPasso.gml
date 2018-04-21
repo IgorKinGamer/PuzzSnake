@@ -24,7 +24,7 @@ if (chao != noone || (membro != noone && membro != ultimoMembro))
 }
 
 // Verifica se tem comida
-comida = instance_place(xNovo, yNovo, obj_Comida); // Ineficiente...
+var comida = instance_place(xNovo, yNovo, obj_Comida); // Ineficiente...
 if (comida != noone)
     comer(comida);
 

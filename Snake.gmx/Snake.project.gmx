@@ -17,6 +17,7 @@
     <scripts name="cobra">
       <script>scripts\executarPasso.gml</script>
       <script>scripts\comer.gml</script>
+      <script>scripts\destruirComida.gml</script>
       <script>scripts\morrer.gml</script>
       <script>scripts\moverMembros.gml</script>
       <script>scripts\numMembros.gml</script>

@@ -242,7 +242,8 @@ if (estado == EST_MOVENDO)
 var movTotalY = velV + gravidade/2;
 velV += gravidade;
 
-// Tenta mover
+var deslH = sprite_get_xoffset(sprite_index);
+var deslV = sprite_get_yoffset(sprite_index);
 
 // Para cada membro, verifica quanto pode descer
 var movY = movTotalY;
@@ -251,8 +252,8 @@ for (i = 0; i &lt; numMembros(); i++)
 {
     var membro = corpo[|i];
     var xBase, yBase;
-    xBase = membro.x + BLOCO/2 - sprite_get_xoffset(sprite_index);
-    yBase = membro.y + BLOCO   - sprite_get_yoffset(sprite_index);
+    xBase = membro.x + BLOCO/2 - deslH;
+    yBase = membro.y + BLOCO   - deslV;
     var chao = collision_line(
             xBase, yBase, xBase, yBase + movY,
             obj_Chao, false, true
@@ -270,6 +271,28 @@ for (i = 0; i &lt; numMembros(); i++)
         // Atualiza o quanto vai mover
         movY = yFinal - yBase;
     }
+}
+
+// Colisão com comida
+for (i = 0; i &lt; numMembros(); i++)
+{
+    var membro = corpo[|i];
+    var xBase, yBase;
+    xBase = membro.x + BLOCO/2 - deslH;
+    yBase = membro.y + BLOCO   - deslV;
+    do
+    {
+        var comida = collision_line(
+            xBase, yBase, xBase, yBase + movY,
+            obj_Comida, false, true
+        );
+        if (comida != noone)
+            if (membro == id) // Cabeça
+                comer(comida)
+            else
+                destruirComida(comida)
+    }
+    until (comida == noone);
 }
 
 // Move cada membro

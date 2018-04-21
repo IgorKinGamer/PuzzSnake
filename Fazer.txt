@@ -1,4 +1,4 @@
-Fazer:
+# Fazer #
 
 Criar corpo inicialmente (para cada fase individualmente?)
 
@@ -7,3 +7,6 @@ Resetar contPasso corretamente (obj_Cobra_Step:Movimento)
 Mostrar a sequência dos membros
 
 Mostrar crescimento pendente
+
+IU:
+- Mostrar tamanho atual
