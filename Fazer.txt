@@ -1,12 +1,7 @@
 # Fazer #
 
-Morrer ao sair da tela
-Sprite ao morrer
-Resetar ao morrer
+Deletar listas da música (obj_Controle.Room Start)
 
-Instrução (teclas) no início
-
-Comidona
 
 Veneno e espinhos
 
@@ -28,3 +23,7 @@ Mostrar a sequência dos membros
 Mostrar crescimento pendente
 
 Encostar com o corpo no objetivo
+
+
+
+Parar fundo um pouco depois

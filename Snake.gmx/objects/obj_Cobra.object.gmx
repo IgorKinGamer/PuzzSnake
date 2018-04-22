@@ -265,7 +265,7 @@ if (estado == EST_MOVENDO)
             <kind>1</kind>
             <string>/// Desenha-se
 
-draw_sprite(spr_Cabeca, direcao, x, y);
+draw_sprite(sprite_index, direcao, x, y);
 </string>
           </argument>
         </arguments>

@@ -38,3 +38,6 @@ if (nCrescer > 0)
 // Move todos os membros
 moverMembros(xNovo, yNovo);
 
+// Avança a música
+avancarMusica();
+

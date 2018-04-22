@@ -10,7 +10,9 @@
   <persistent>0</persistent>
   <colour>16757606</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>// Dá instruções
+
+instance_create(0, 0, obj_Instrutor);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

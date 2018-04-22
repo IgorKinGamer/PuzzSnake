@@ -4,7 +4,18 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\mus_Bat_tu</sound>
+    <sound>sound\mus_Bat_ts</sound>
+    <sound>sound\mus_Bat_ta</sound>
+    <sound>sound\mus1_C</sound>
+    <sound>sound\mus1_Am</sound>
+    <sound>sound\mus1_F</sound>
+    <sound>sound\mus1_1</sound>
+    <sound>sound\mus1_2</sound>
+    <sound>sound\mus1_3</sound>
+    <sound>sound\mus1_4</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_Membro</sprite>
     <sprite>sprites\spr_Cabeca</sprite>
@@ -15,20 +26,28 @@
     <sprite>sprites\spr_Comidona</sprite>
     <sprite>sprites\spr_Objetivo</sprite>
     <sprite>sprites\spr_Balao</sprite>
+    <sprite>sprites\spr_Setas</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="cobra">
       <script>scripts\executarPasso.gml</script>
+      <script>scripts\aplicarGravidade.gml</script>
+      <script>scripts\moverMembros.gml</script>
       <script>scripts\comer.gml</script>
       <script>scripts\destruirComida.gml</script>
       <script>scripts\morrer.gml</script>
-      <script>scripts\moverMembros.gml</script>
-      <script>scripts\numMembros.gml</script>
       <script>scripts\passarFase.gml</script>
       <script>scripts\perderFase.gml</script>
-      <script>scripts\aplicarGravidade.gml</script>
+      <script>scripts\numMembros.gml</script>
+    </scripts>
+    <scripts name="mus">
+      <script>scripts\definirMusica.gml</script>
+      <script>scripts\avancarMusica.gml</script>
+      <script>scripts\decodificarMelodia.gml</script>
+      <script>scripts\decodificarFundo.gml</script>
+      <script>scripts\pararMusica.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -39,7 +58,11 @@
     <object>objects\obj_Comidona</object>
     <object>objects\obj_Controle</object>
     <object>objects\obj_Objetivo</object>
-    <object>objects\obj_PassadorDeFase</object>
+    <objects name="ações">
+      <object>objects\obj_PassadorDeFase</object>
+      <object>objects\obj_ReiniciadorDeFase</object>
+      <object>objects\obj_Instrutor</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\FaseInicio</room>
