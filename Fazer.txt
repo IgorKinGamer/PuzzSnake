@@ -1,9 +1,9 @@
 # Fazer #
 
-Deletar listas da música (obj_Controle.Room Start)
-
-
 Veneno e espinhos
+
+Acelerador
+Fase de canos
 
 Tempo
 
