@@ -1,6 +1,10 @@
 # Fazer #
 
 Morrer ao sair da tela
+Sprite ao morrer
+Resetar ao morrer
+
+Instrução (teclas) no início
 
 Comidona
 

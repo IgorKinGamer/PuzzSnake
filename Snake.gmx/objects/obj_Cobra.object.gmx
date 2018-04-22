@@ -86,7 +86,7 @@ estado = EST_ESPERANDO;
 
 contPasso = 1;
 direcao = DIR_DIREITA;
-direcaoAnt = direcao;
+direcaoAnt = -1;
 
 </string>
           </argument>

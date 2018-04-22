@@ -72,10 +72,24 @@ for (i = 0; i < numMembros(); i++)
             perderFase();
 }
 
+var naTela = false;
 // Move cada membro
 for (i = 0; i < numMembros(); i++)
 {
     var membro = corpo[|i];
     membro.y = round(membro.y + movY);
+    
+    // Verifica se ainda está na tela
+    var xBase, yCima, yBaixo;
+    //xBase = membro.x - deslH;
+    yCima  = membro.y - deslV;
+    yBaixo = membro.y - deslV + BLOCO - 1;
+    // O x é "quadradinho" (TODO não considera deslH)
+    if (membro.x >= 0 && membro.x < room_width
+            && yBaixo >= 0 && yCima < room_height)
+        naTela = true;
 }
 
+// Saiu da tela: morre
+if (!naTela)
+    morrer();
