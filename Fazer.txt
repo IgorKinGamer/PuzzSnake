@@ -1,5 +1,20 @@
 # Fazer #
 
+Morrer ao sair da tela
+
+Comidona
+
+Veneno e espinhos
+
+Tempo
+
+Pontos
+
+IU:
+- Título e frase da fase
+- Pontos
+- Mostrar tamanho atual
+
 Criar corpo inicialmente (para cada fase individualmente?)
 
 Resetar contPasso corretamente (obj_Cobra_Step:Movimento)
@@ -9,6 +24,3 @@ Mostrar a sequência dos membros
 Mostrar crescimento pendente
 
 Encostar com o corpo no objetivo
-
-IU:
-- Mostrar tamanho atual

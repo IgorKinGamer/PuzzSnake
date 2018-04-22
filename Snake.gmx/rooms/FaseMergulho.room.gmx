@@ -66,6 +66,7 @@
     <instance objName="obj_Chao" x="64" y="160" name="inst_157012CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Comida" x="160" y="96" name="inst_F4229B4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Comida" x="288" y="96" name="inst_3A147C69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Comidona" x="224" y="96" name="inst_320BA1B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

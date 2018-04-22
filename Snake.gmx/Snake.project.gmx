@@ -8,9 +8,13 @@
   <sprites name="sprites">
     <sprite>sprites\spr_Membro</sprite>
     <sprite>sprites\spr_Cabeca</sprite>
+    <sprite>sprites\spr_CabecaDerrota</sprite>
+    <sprite>sprites\spr_CabecaVitoria</sprite>
     <sprite>sprites\spr_Chao</sprite>
     <sprite>sprites\spr_Comida</sprite>
+    <sprite>sprites\spr_Comidona</sprite>
     <sprite>sprites\spr_Objetivo</sprite>
+    <sprite>sprites\spr_Balao</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -24,17 +28,18 @@
       <script>scripts\numMembros.gml</script>
       <script>scripts\passarFase.gml</script>
       <script>scripts\perderFase.gml</script>
+      <script>scripts\aplicarGravidade.gml</script>
     </scripts>
-    <script>scripts\aplicarGravidade.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_Cobra</object>
     <object>objects\obj_Membro</object>
     <object>objects\obj_Chao</object>
     <object>objects\obj_Comida</object>
+    <object>objects\obj_Comidona</object>
     <object>objects\obj_Controle</object>
     <object>objects\obj_Objetivo</object>
-    <object>objects\VAZIO</object>
+    <object>objects\obj_PassadorDeFase</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\FaseInicio</room>
