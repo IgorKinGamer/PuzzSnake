@@ -4,11 +4,11 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="7" enumb="4">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,20 +25,98 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Inicia a música
+            <string>/// Criar listas da música
 
-// TODO Qual música
+global.notas   = ds_list_create();
+global.melodia = ds_list_create();
+global.fundo   = ds_list_create();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Aleatorizar
+
+randomize();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Cria os textos
+
+var linha = criarLinhaIU(640/2, 352, criarLista(32, 32), 1); // Vertical
+
+var txtEnter, txtEsc;
+txtEnter = criarTextoIU("Press ENTER to start", fnt_Frase, c_black);
+txtEsc   = criarTextoIU("Press ESC to exit",    fnt_Frase, c_black);
+
+colocarNaLinhaIU(linha, txtEnter, 1, .5);
+colocarNaLinhaIU(linha, txtEsc,   2, .5);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Música
 
 definirMusica();
-
-/*
-switch (room) // ?
-*/
+alarm[0] = round(0.4 * room_speed);
 
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -55,67 +133,10 @@ switch (room) // ?
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Cria a interface
+            <string>/// Avançar a música
 
-instance_create(0, 0, obj_Interface);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="109">
-      <action>
-        <libid>1</libid>
-        <id>221</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_previous_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="9" enumb="107">
-      <action>
-        <libid>1</libid>
-        <id>222</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_next_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="9" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Cria reiniciador
-
-instance_create(0, 0, obj_ReiniciadorDeFase);
+avancarMusica();
+alarm[0] = round(0.4 * room_speed);
 
 </string>
           </argument>
@@ -132,6 +153,22 @@ instance_create(0, 0, obj_ReiniciadorDeFase);
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
         <functionname>action_end_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="9" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>222</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_next_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>

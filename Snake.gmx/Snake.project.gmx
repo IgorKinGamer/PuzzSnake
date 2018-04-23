@@ -36,7 +36,9 @@
     <sprite>sprites\spr_Balao</sprite>
     <sprite>sprites\spr_Setas</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\back_Cobra</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="cobra">
@@ -99,17 +101,19 @@
     </objects>
     <object>objects\obj_Efeito</object>
     <object>objects\VAZIO</object>
+    <object>objects\obj_Abertura</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\TelaInicial</room>
     <room>rooms\FaseInicio</room>
     <room>rooms\FasePulos</room>
     <room>rooms\FasePendurada</room>
     <room>rooms\FaseMergulho</room>
-    <room>rooms\FaseContorno</room>
-    <room>rooms\FaseImpulso</room>
     <room>rooms\FaseCanos</room>
     <room>rooms\FaseManobras</room>
-    <room>rooms\room8</room>
+    <room>rooms\TelaLD41</room>
+    <room>rooms\FaseImpulso</room>
+    <room>rooms\FaseContorno</room>
   </rooms>
   <constants number="9">
     <constant name="EST_ESPERANDO">0</constant>

@@ -16,6 +16,7 @@ switch (room)
         break;
     
     case FaseManobras:
+    case TelaLD41:
         tempoPasso = 0.4 * room_speed;
         break;
     

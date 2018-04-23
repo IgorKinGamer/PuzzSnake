@@ -32,8 +32,15 @@ barra = criarLinhaIU(32, 32, criarLista((640-64)/2, (640-64)/2));
 
 definirTituloEFrase();
 
-titulo = criarTextoIU(txtTitulo, fnt_Titulo, c_black, -1, 0);
-frase = criarTextoIU(txtFrase, fnt_Frase, c_maroon, 1, 0);
+var cor1 = c_black;
+var cor2 = c_maroon;
+if (room == FaseCanos || room == FaseManobras || room == TelaLD41)
+{
+    cor1 = c_white;
+    cor2 = c_red;
+}
+titulo = criarTextoIU(txtTitulo, fnt_Titulo, cor1, -1, 0);
+frase = criarTextoIU(txtFrase, fnt_Frase, cor2, 1, 0);
 
 colocarNaLinhaIU(barra, titulo, 1, 0);
 colocarNaLinhaIU(barra, frase,  2, 1);

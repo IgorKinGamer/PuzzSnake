@@ -5,7 +5,10 @@ var defMelodia, defFundo;
 ds_list_clear(global.notas);
 switch (room)
 {
+    case TelaInicial:
+    case FaseCanos:
     case FaseManobras:
+    case TelaLD41:
         // Batida
         defMelodia = "usausuas" + "usau uaa" + "usaxsuas" + "uxuxxxxx";
         defFundo   = " ";

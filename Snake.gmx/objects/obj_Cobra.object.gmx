@@ -239,7 +239,7 @@ if (estado == EST_MOVENDO)
             <kind>1</kind>
             <string>/// Gravidade
 
-if (estado == EST_MOVENDO)
+if (estado == EST_MOVENDO &amp;&amp; room != TelaLD41)
     aplicarGravidade();
 
 </string>
