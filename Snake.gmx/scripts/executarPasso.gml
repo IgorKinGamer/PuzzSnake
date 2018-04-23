@@ -27,6 +27,8 @@ if (chao != noone || (membro != noone && membro != ultimoMembro))
 var comida = instance_place(xNovo, yNovo, obj_Comida); // Ineficiente...
 if (comida != noone)
     comer(comida);
+else
+    sprite_index = spr_Cabeca; // Para de sorrir
 
 // Verifica se deve crescer
 if (nCrescer > 0)

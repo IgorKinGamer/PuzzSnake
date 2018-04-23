@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-20</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,38 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Contador
+            <string>/// Inicialização
 
-tempo = 1 * room_speed;
 cont = 0;
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Efeito no objetivo
-
-criarEfeito(
-    obj_Objetivo.x + BLOCO/2, obj_Objetivo.y + BLOCO/2, // x, y
-        256, // Raio
-        1 * room_speed // Tempo
-);
+// Definir ao criar:
+// tempo = ? * room_speed;
+// x, y, raio
 
 </string>
           </argument>
@@ -85,10 +60,42 @@ criarEfeito(
 cont++;
 
 if (cont == tempo)
-{
-    pararMusica();
-    room_goto_next();
-}
+    instance_destroy();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Efeito
+
+var p = cont/tempo;
+
+draw_set_colour(c_white);
+draw_set_blend_mode(bm_add);
+draw_set_alpha(1 - p);
+
+draw_circle_colour(x, y, p*raio, c_white, c_black, false);
+
+draw_set_alpha(1);
+draw_set_blend_mode(bm_normal);
 
 </string>
           </argument>

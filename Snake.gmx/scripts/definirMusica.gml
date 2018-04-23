@@ -1,15 +1,25 @@
 // definirMusica()
 
 var defMelodia, defFundo;
-defMelodia = "usausuas" + "usau uaa" + "usaxsuas" + "uxuxxxxx";
-defFundo   = "";
 
-// Música 1
-defMelodia = "1 3 24  " + "3 4321  " + "1 3 24  " + "3 432 1 "
-        + "1 2 13  " + "xxxxxxxx" + "1 1 21 3" + "xxxxxxxx";
-defFundo   = "CCCCCCCC" + "FFFFFFFF" + "aaaaaaaa" + "FFFFFFFF";
 ds_list_clear(global.notas);
-ds_list_add(global.notas, "1", "2", "3", "4");
+switch (room)
+{
+    case FaseManobras:
+        // Batida
+        defMelodia = "usausuas" + "usau uaa" + "usaxsuas" + "uxuxxxxx";
+        defFundo   = " ";
+        ds_list_add(global.notas, "u", "s", "a");
+        break;
+    
+    default:
+        // Música 1
+        defMelodia = "1 3 24  " + "3 4321  " + "1 3 24  " + "3 432 1 "
+                + "1 2 13  " + "xxxxxxxx" + "1 1 21 3" + "xxxxxxxx";
+        defFundo   = "CCCCCCCC" + "FFFFFFFF" + "aaaaaaaa" + "FFFFFFFF";
+        ds_list_add(global.notas, "1", "2", "3", "4");
+        break;
+}
 
 ds_list_clear(global.melodia);
 decodificarMelodia(defMelodia);

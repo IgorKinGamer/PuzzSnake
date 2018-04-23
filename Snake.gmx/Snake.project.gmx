@@ -7,16 +7,22 @@
     <extension index="0">extensions\IU</extension>
   </NewExtensions>
   <sounds name="sound">
-    <sound>sound\mus_Bat_tu</sound>
-    <sound>sound\mus_Bat_ts</sound>
-    <sound>sound\mus_Bat_ta</sound>
-    <sound>sound\mus1_C</sound>
-    <sound>sound\mus1_Am</sound>
-    <sound>sound\mus1_F</sound>
-    <sound>sound\mus1_1</sound>
-    <sound>sound\mus1_2</sound>
-    <sound>sound\mus1_3</sound>
-    <sound>sound\mus1_4</sound>
+    <sounds name="mus">
+      <sound>sound\som_Comida</sound>
+      <sound>sound\mus_Bat_tu</sound>
+      <sound>sound\mus_Bat_ts</sound>
+      <sound>sound\mus_Bat_ta</sound>
+      <sound>sound\mus1_C</sound>
+      <sound>sound\mus1_Am</sound>
+      <sound>sound\mus1_F</sound>
+      <sound>sound\mus1_1</sound>
+      <sound>sound\mus1_2</sound>
+      <sound>sound\mus1_3</sound>
+      <sound>sound\mus1_4</sound>
+    </sounds>
+    <sound>sound\som_Morte1</sound>
+    <sound>sound\som_Morte2</sound>
+    <sound>sound\som_Vitoria</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_Membro</sprite>
@@ -43,7 +49,9 @@
       <script>scripts\passarFase.gml</script>
       <script>scripts\perderFase.gml</script>
       <script>scripts\numMembros.gml</script>
+      <script>scripts\definirVelocidade.gml</script>
     </scripts>
+    <script>scripts\criarEfeito.gml</script>
     <scripts name="mus">
       <script>scripts\definirMusica.gml</script>
       <script>scripts\avancarMusica.gml</script>
@@ -89,6 +97,8 @@
       <object>objects\obj_IU_Texto</object>
       <object>objects\obj_IU_Linha</object>
     </objects>
+    <object>objects\obj_Efeito</object>
+    <object>objects\VAZIO</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\FaseInicio</room>
@@ -96,8 +106,10 @@
     <room>rooms\FasePendurada</room>
     <room>rooms\FaseMergulho</room>
     <room>rooms\FaseContorno</room>
+    <room>rooms\FaseImpulso</room>
+    <room>rooms\FaseCanos</room>
     <room>rooms\FaseManobras</room>
-    <room>rooms\room6</room>
+    <room>rooms\room8</room>
   </rooms>
   <constants number="9">
     <constant name="EST_ESPERANDO">0</constant>

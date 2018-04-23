@@ -1,5 +1,7 @@
 # Fazer #
 
+Títulos
+
 Veneno e espinhos
 
 Acelerador
@@ -23,7 +25,3 @@ Mostrar a sequência dos membros
 Mostrar crescimento pendente
 
 Encostar com o corpo no objetivo
-
-
-
-Parar fundo um pouco depois

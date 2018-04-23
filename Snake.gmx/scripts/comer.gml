@@ -13,9 +13,16 @@ switch (comida.object_index)
         break;
 }
 
+// Cria efeito
+criarEfeito(comida.x + BLOCO/2, comida.y + BLOCO/2, 128, 0.5 * room_speed);
+
+// Sorri
+sprite_index = spr_CabecaVitoria;
+
 // Destrói a comida
 with (comida)
     instance_destroy();
-
-// Som TODO
+   
+// Som
+audio_play_sound(som_Comida, 0, false);
 

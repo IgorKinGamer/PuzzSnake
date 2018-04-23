@@ -87,6 +87,7 @@ estado = EST_ESPERANDO;
 contPasso = 1;
 direcao = DIR_DIREITA;
 direcaoAnt = -1;
+definirVelocidade();
 
 </string>
           </argument>
@@ -211,8 +212,8 @@ if (estado == EST_MOVENDO)
     {
         executarPasso();
         
-        // Reseta contPasso TODO
-        contPasso = 15;
+        // Reseta contPasso
+        contPasso = tempoPasso; // TODO Acelerado
     }
 }
 
